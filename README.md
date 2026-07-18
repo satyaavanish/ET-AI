@@ -21,7 +21,7 @@ When a zone becomes critical, the platform coordinates the first response, creat
 
 ---
 
-## 60-second judge demo
+## Demo
 
 1. Start the application.
 2. Open `http://127.0.0.1:8420`.
