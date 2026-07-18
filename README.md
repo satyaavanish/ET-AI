@@ -7,16 +7,6 @@ shift context and occupancy—into one **explainable compound-risk score per zon
 It then coordinates the first response, preserves an auditable timeline and checks
 illustrative compliance rules continuously.
 
-## The 60-second judge demo
-
-1. Start the project and open `http://127.0.0.1:8420`.
-2. Click **Run emergency demo**.
-3. Watch zone **B1** become critical even though its CO reading is only at warning level.
-4. Compare **Sensor only** with **Fused context** in the risk feed.
-5. Show the automatic sequence: trigger → evacuate → notify → isolate work → preserve evidence → draft report.
-6. Download the evidence JSON and run an incident-pattern search.
-
-The deterministic button removes the risk of waiting for a random scenario during judging.
 
 ## Why this version is submission-ready
 
