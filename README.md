@@ -1,4 +1,5 @@
-# ZH-1 — Compound Risk & Zero-Harm Console
+#AI-Powered Industrial Safety Intelligence for Zero-Harm
+Operations
 
 **Hackathon submission for Problem Statement 1: AI-Powered Industrial Safety Intelligence for Zero-Harm Operations**
 
