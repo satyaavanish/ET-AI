@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explainable compound-risk intelligence for industrial zero-harm operations." />
+  <title>ZH-1 | Zero-Harm Safety Console</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="console">
+  <header class="topbar">
+    <div class="topbar__brand">
+      <span class="topbar__mark">ZH-1</span>
+      <div>
+        <div class="topbar__title">Compound Risk &amp; Zero-Harm Console</div>
+        <div class="topbar__strap">Explainable fusion · deterministic demo · offline intelligence</div>
+      </div>
+    </div>
+    <div class="topbar__meta">
+      <div class="meta-chip"><span class="meta-chip__label">Shift</span><span class="meta-chip__value" id="shiftValue">—</span></div>
+      <div class="meta-chip"><span class="meta-chip__label">Tick</span><span class="meta-chip__value" id="tickValue">0</span></div>
+      <div class="meta-chip"><span class="meta-chip__label">Mode</span><span class="meta-chip__value" id="modeValue">Normal</span></div>
+      <div class="meta-chip meta-chip--conn"><span class="dot" id="connDot"></span><span id="connLabel">connecting…</span></div>
+    </div>
+  </header>
+
+  <section class="demo-toolbar" aria-label="Demo controls">
+    <div>
+      <strong>Judge demo controls</strong>
+      <span>Trigger a guaranteed compound event in B1—no waiting for randomness.</span>
+    </div>
+    <div class="demo-toolbar__actions">
+      <button id="triggerDemo" class="button button--danger" type="button">Run emergency demo</button>
+      <button id="resetDemo" class="button" type="button">Reset simulation</button>
+      <button id="downloadEvidence" class="button button--ghost" type="button">Download evidence JSON</button>
+    </div>
+  </section>
+
+  <section class="kpi-grid" aria-label="Operational metrics">
+    <article class="kpi"><span class="kpi__label">Maximum fused risk</span><strong id="kpiFused">0</strong><small>0–100</small></article>
+    <article class="kpi"><span class="kpi__label">Sensor-only baseline</span><strong id="kpiSensor">0</strong><small>counterfactual</small></article>
+    <article class="kpi kpi--accent"><span class="kpi__label">Fusion uplift</span><strong id="kpiUplift">+0</strong><small>additional context</small></article>
+    <article class="kpi"><span class="kpi__label">Compound zones</span><strong id="kpiCompound">0</strong><small>2+ factor types</small></article>
+    <article class="kpi"><span class="kpi__label">People in alert zones</span><strong id="kpiPeople">0</strong><small>live occupancy</small></article>
+    <article class="kpi"><span class="kpi__label">Automated actions</span><strong id="kpiActions">0</strong><small>auditable timeline</small></article>
+  </section>
+
+  <main class="grid">
+    <section class="panel panel--map">
+      <div class="panel__head">
+        <div>
+          <h2>Geospatial safety heatmap</h2>
+          <p class="panel__sub">Live fused risk by plant zone. Select a zone to inspect its context.</p>
+        </div>
+        <span id="scenarioBadge" class="status-badge">Normal simulation</span>
+      </div>
+      <div id="zoneMap" class="zone-map"></div>
+      <div class="legend">
+        <span><i class="swatch swatch--normal"></i>Normal</span>
+        <span><i class="swatch swatch--elevated"></i>Elevated</span>
+        <span><i class="swatch swatch--alert"></i>Alert</span>
+        <span><i class="swatch swatch--critical"></i>Critical</span>
+      </div>
+    </section>
+
+    <section class="panel panel--alerts">
+      <div class="panel__head">
+        <div>
+          <h2>Explainable compound-risk feed</h2>
+          <p class="panel__sub">Fused score versus the exact sensor-only counterfactual.</p>
+        </div>
+      </div>
+      <div id="riskFeed" class="risk-feed"></div>
+    </section>
+
+    <section class="panel panel--orchestrator">
+      <div class="panel__head">
+        <div>
+          <h2>Emergency response orchestrator</h2>
+          <p class="panel__sub">Timestamped first-response actions, generated once risk becomes critical.</p>
+        </div>
+      </div>
+      <div id="orchLog" class="orch-log"></div>
+    </section>
+
+    <section class="panel panel--permits">
+      <div class="panel__head">
+        <div>
+          <h2>Digital permit intelligence</h2>
+          <p class="panel__sub">Active permits cross-checked against live operating conditions.</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="permit-table">
+          <thead><tr><th>Permit</th><th>Zone</th><th>Type</th><th>Issued by</th></tr></thead>
+          <tbody id="permitRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel panel--compliance">
+      <div class="panel__head">
+        <div>
+          <h2>Continuous compliance audit</h2>
+          <p class="panel__sub">Illustrative checks against paraphrased demo reference clauses.</p>
+        </div>
+      </div>
+      <div id="complianceList" class="compliance-list"></div>
+    </section>
+
+    <section class="panel panel--rag">
+      <div class="panel__head panel__head--split">
+        <div>
+          <h2>Incident pattern intelligence</h2>
+          <p class="panel__sub">Auditable offline TF-IDF retrieval—no cloud API or hidden model call.</p>
+        </div>
+        <span class="status-badge status-badge--quiet">8-document demo corpus</span>
+      </div>
+      <form id="ragForm" class="rag-form">
+        <input id="ragQuery" type="text" value="hot work near elevated gas" minlength="2" maxlength="160" aria-label="Incident search query" />
+        <button type="submit" class="button button--primary">Search evidence</button>
+      </form>
+      <div id="ragResults" class="rag-results"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <strong>Prototype scope:</strong> synthetic plant data, explainable fusion logic and illustrative compliance rules.
+    Validate against site data, approved procedures and governance before operational use.
+    <a href="/api/docs" target="_blank" rel="noreferrer">Open API documentation</a>
+  </footer>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>

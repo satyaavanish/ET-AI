@@ -1,0 +1,146 @@
+{
+  "project": "ZH-1 Compound Risk & Zero-Harm Console",
+  "version": "1.0.0-hackathon-final",
+  "entrypoint": "python -m uvicorn backend.app:app --host 127.0.0.1 --port 8420",
+  "dashboard": "http://127.0.0.1:8420",
+  "verified": {
+    "python_compile": true,
+    "automated_tests": "6 passed",
+    "javascript_syntax": true,
+    "live_health_check": true,
+    "deterministic_demo": {
+      "zone": "B1",
+      "fused_score": 96.3,
+      "sensor_only_score": 20.2,
+      "automated_actions": 6
+    }
+  },
+  "file_count": 25,
+  "files": [
+    {
+      "path": ".dockerignore",
+      "bytes": 49,
+      "sha256": "920ae015b5bf4c67569a8b564976ea3f838c886d036069f5225ca26ed3d0b46a"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 60,
+      "sha256": "69ecb3c38e388b2e3c8443f6f1dc899f0b176121ad629db1fff3b564bb5d097f"
+    },
+    {
+      "path": "Dockerfile",
+      "bytes": 579,
+      "sha256": "3137b2cacea5169d74bb5dea9119158fb166c44210a6f8f3c236c21371a6e004"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6325,
+      "sha256": "37602ae0f7d04f636c3c10517b29fd707a54c1b15143d6c4d052155bd81f5490"
+    },
+    {
+      "path": "SUBMISSION_CHECKLIST.md",
+      "bytes": 674,
+      "sha256": "8159182872d33881de17d6e8de5872dc3aec70ec10e6cbac17c6355e60e5b2f8"
+    },
+    {
+      "path": "backend/__init__.py",
+      "bytes": 28,
+      "sha256": "08476087fabbb02895acb7b55001fc881bb96691504453c77b1186b53c6f5309"
+    },
+    {
+      "path": "backend/app.py",
+      "bytes": 5930,
+      "sha256": "cfa886aff7592d36bae48f03cdab69c176d0985e144455a9736eb7980048caa4"
+    },
+    {
+      "path": "backend/incident_intel.py",
+      "bytes": 6287,
+      "sha256": "7dd9ba7c5b439d99079a818611109c5259425ba63ec71058aea49d73ea5b738a"
+    },
+    {
+      "path": "backend/plant_sim.py",
+      "bytes": 8053,
+      "sha256": "aa3e7fd5c1464a4f5a64831d11c89ab90af50e7cc616b7124d7bac22b664b8ae"
+    },
+    {
+      "path": "backend/requirements.txt",
+      "bytes": 43,
+      "sha256": "37fca0c234f36411c7eb188f04d165c91e2cc3f06ca35a9771e6bc7d2878be56"
+    },
+    {
+      "path": "backend/response_agents.py",
+      "bytes": 4881,
+      "sha256": "8e2ee2e434dc2920ab06de414fc6daa533ec6a3fd3afeeed4eb858ab0ec8e67e"
+    },
+    {
+      "path": "backend/risk_engine.py",
+      "bytes": 5322,
+      "sha256": "390a60c30c94c2a107228b8455979a41c6d8846634139adff386ca66f431e6ee"
+    },
+    {
+      "path": "docker-compose.yml",
+      "bytes": 97,
+      "sha256": "9b59b40bd142491638878f4bb7af31c197fc812b46c86bf0ab6239366b71fdb0"
+    },
+    {
+      "path": "docs/architecture.svg",
+      "bytes": 7779,
+      "sha256": "31c05b4a0ee082f066a0c7f2a8d7e8ee8f9ec111055a14dcadfe90cbf85f52e9"
+    },
+    {
+      "path": "docs/demo_script.md",
+      "bytes": 1616,
+      "sha256": "ea80b6f6f923816d2c8e9d68bf62ccf03b6210ebfcf61e879ffff7e8ad15c1fe"
+    },
+    {
+      "path": "docs/pitch_outline.md",
+      "bytes": 1547,
+      "sha256": "863478e2daf2289b749f0e4853e7e08b8ed6c5c6ebb2dd54e7dabe71d8c886ea"
+    },
+    {
+      "path": "frontend/app.js",
+      "bytes": 10478,
+      "sha256": "6fc563388f3a45ad7f99c6b9e159f266c0eb5851dedc5bd627b8fe6885ce05ab"
+    },
+    {
+      "path": "frontend/favicon.svg",
+      "bytes": 239,
+      "sha256": "7f9a2bb21d4bdaa6c73540ae09801505741c98e23c332e63e8c8ba60c195539d"
+    },
+    {
+      "path": "frontend/index.html",
+      "bytes": 6380,
+      "sha256": "3b3e19e90d7d39764da1dd647978a7c9deb7a691cb9da639f184c8b6e4481615"
+    },
+    {
+      "path": "frontend/style.css",
+      "bytes": 11829,
+      "sha256": "3fd89529b97afb264178a4409814221ab40a045b7c37cb5585959903bddf051b"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "bytes": 56,
+      "sha256": "c6435812d1c73dbdbf5f6d56bc7aa7be328c35ce71fa2cf01f3acac45da89380"
+    },
+    {
+      "path": "run_linux.sh",
+      "bytes": 478,
+      "sha256": "b0380a00b408bf02a69b5ff091fad88b0a1c03ed8fd262dda3bd5c3ec3debef5"
+    },
+    {
+      "path": "run_windows.bat",
+      "bytes": 409,
+      "sha256": "58c8f0bb0a67f7e6cf8b0ed19a20003f2d9337185c68782c0e659967546b5890"
+    },
+    {
+      "path": "tests/test_api.py",
+      "bytes": 1132,
+      "sha256": "53923f94b2fce3b8b0a5f0de2c301b50380b18d0e6638c36892d2107b2daf441"
+    },
+    {
+      "path": "tests/test_core.py",
+      "bytes": 1602,
+      "sha256": "56e9de825cf1ac8dfd50da4e819df0a1b5594acfa531023f07a9b24bffda889c"
+    }
+  ]
+}
